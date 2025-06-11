@@ -1,0 +1,52 @@
+{
+  "title": "Ölümcül Rüya",
+  "version": "1.0",
+  "intro": {
+    "background": "MainMenu",
+    "audio": "assets/intro_music.mp3",
+
+  },
+  "storySections": [
+    {
+      "id": "section1",
+      "title": "Kabus",
+      "steps": [
+        {
+          "image": "scene1",
+          "audio": "scene1.mp3",
+          "dialogues": [
+            { "speaker": "Narrator", "text": "O sabah sessizlik hakimdi." },
+            { "speaker": "Derya", "text": "Bu rüya... gerçek miydi?" }
+          ]
+        }
+      ]
+    }
+  ],
+  "suspects": [
+    {
+      "id": "zeynep",
+      "name": "Zeynep",
+      "image": "zeynep.png",
+      "summary": "Baran’ın asistanı. Geçmişi karanlık.",
+      "interrogation": {
+        "dialogues": [
+          { "speaker": "Dedektif", "text": "O gece neredeydin?" },
+          { "speaker": "Zeynep", "text": "Ofisteydim, yalnızdım." }
+        ],
+        "evidence": [
+          {
+            "type": "audio",
+            "label": "Güvenlik Kaydı",
+            "file": "zeynep_tape.mp3"
+          }
+        ]
+      }
+    }
+  ],
+  "ending": {
+    "trueCulpritId": "zeynep",
+    "narration": "Zeynep, Baran'ın sırlarını ifşa etmek istiyordu...",
+    "image": "ending.jpg",
+    "audio": "ending_theme.mp3"
+  }
+}
