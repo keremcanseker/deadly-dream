@@ -18,6 +18,8 @@ final class StoryViewModel: ObservableObject {
 
     func next() {
         engine.advance()
+        // Manuel olarak UI güncellemesini tetikle
+        objectWillChange.send()
     }
 
     var isFinished: Bool {

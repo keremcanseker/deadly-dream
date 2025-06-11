@@ -34,20 +34,29 @@ final class StoryEngine: ObservableObject {
     }
 
     func advance() {
-        guard let step = currentStep else { return }
+        guard let step = currentStep else { 
+            print("ERROR: currentStep nil!")
+            return 
+        }
+
+        print("BEFORE: sectionIndex=\(sectionIndex), stepIndex=\(stepIndex), dialogueIndex=\(dialogueIndex)")
+        print("step.dialogues.count = \(step.dialogues.count)")
 
         if dialogueIndex + 1 < step.dialogues.count {
             dialogueIndex += 1
-        } else if stepIndex + 1 < currentSection?.steps.count ?? 0 {
-            stepIndex += 1
-            dialogueIndex = 0
-        } else if sectionIndex + 1 < storySections.count {
-            sectionIndex += 1
-            stepIndex = 0
-            dialogueIndex = 0
+            print("DIYALOG İLERLETİLDİ: dialogueIndex=\(dialogueIndex)")
         } else {
-            // Story completely finished
-            sectionIndex = storySections.count
+            if sectionIndex + 1 < storySections.count {
+                sectionIndex += 1
+                stepIndex = 0
+                dialogueIndex = 0
+                print("YENİ SECTION'A GEÇİLDİ: sectionIndex=\(sectionIndex)")
+            } else {
+                sectionIndex = storySections.count
+                print("HİKAYE BİTTİ")
+            }
         }
+        
+        print("AFTER: sectionIndex=\(sectionIndex), stepIndex=\(stepIndex), dialogueIndex=\(dialogueIndex)")
     }
 } 

@@ -2,21 +2,173 @@
   "title": "Ölümcül Rüya",
   "version": "1.0",
   "intro": {
-    "background": "MainMenu",
-    "audio": "assets/intro_music.mp3",
-
+    "background": "intro_background",
+    "audio": "assets/intro_music.mp3"
   },
   "storySections": [
     {
       "id": "section1",
-      "title": "Kabus",
+      "title": "Bölüm 1",
       "steps": [
         {
-          "image": "scene1",
+          "image": "image1",
           "audio": "scene1.mp3",
           "dialogues": [
-            { "speaker": "Narrator", "text": "O sabah sessizlik hakimdi." },
-            { "speaker": "Derya", "text": "Bu rüya... gerçek miydi?" }
+            {
+              "speaker": "Narrator",
+              "text": "Sabahın ilk ışıklarıyla uyanıyorsun."
+            },
+            { "speaker": "Derya", "text": "Bugün farklı bir gün olacak gibi." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section2",
+      "title": "Bölüm 2",
+      "steps": [
+        {
+          "image": "image2",
+          "audio": "scene2.mp3",
+          "dialogues": [
+            {
+              "speaker": "Narrator",
+              "text": "Derya, evden çıkarken bir gölge fark eder."
+            },
+            { "speaker": "Derya", "text": "Kim var orada?" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section3",
+      "title": "Bölüm 3",
+      "steps": [
+        {
+          "image": "image3",
+          "audio": "scene3.mp3",
+          "dialogues": [
+            {
+              "speaker": "Narrator",
+              "text": "Sokaklar sessizdir, bir tek ayak sesleri duyulur."
+            },
+            {
+              "speaker": "Derya",
+              "text": "Bu sessizlik hiç hayra alamet değil."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section4",
+      "title": "Bölüm 4",
+      "steps": [
+        {
+          "image": "image4",
+          "audio": "scene4.mp3",
+          "dialogues": [
+            { "speaker": "Narrator", "text": "Birden telefonun çalar." },
+            { "speaker": "Derya", "text": "Alo? Kim arıyor bu saatte?" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section5",
+      "title": "Bölüm 5",
+      "steps": [
+        {
+          "image": "image5",
+          "audio": "scene5.mp3",
+          "dialogues": [
+            {
+              "speaker": "Narrator",
+              "text": "Telefondaki ses tedirgin edicidir."
+            },
+            { "speaker": "Bilinmeyen", "text": "Dikkatli ol, Derya." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section6",
+      "title": "Bölüm 6",
+      "steps": [
+        {
+          "image": "image6",
+          "audio": "scene6.mp3",
+          "dialogues": [
+            {
+              "speaker": "Narrator",
+              "text": "Derya, hızla ofise doğru ilerler."
+            },
+            { "speaker": "Derya", "text": "Bir şeyler yolunda gitmiyor." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section7",
+      "title": "Bölüm 7",
+      "steps": [
+        {
+          "image": "image7",
+          "audio": "scene7.mp3",
+          "dialogues": [
+            {
+              "speaker": "Narrator",
+              "text": "Ofiste bir hareketlilik vardır."
+            },
+            { "speaker": "Baran", "text": "Derya, seni bekliyordum." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section8",
+      "title": "Bölüm 8",
+      "steps": [
+        {
+          "image": "image8",
+          "audio": "scene8.mp3",
+          "dialogues": [
+            {
+              "speaker": "Narrator",
+              "text": "Baran, elinde bir dosya ile gelir."
+            },
+            { "speaker": "Baran", "text": "Bunu görmen gerek." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section9",
+      "title": "Bölüm 9",
+      "steps": [
+        {
+          "image": "image9",
+          "audio": "scene9.mp3",
+          "dialogues": [
+            {
+              "speaker": "Narrator",
+              "text": "Derya, dosyayı açar ve şok olur."
+            },
+            { "speaker": "Derya", "text": "Bu... imkansız!" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "section10",
+      "title": "Bölüm 10",
+      "steps": [
+        {
+          "image": "image10",
+          "audio": "scene10.mp3",
+          "dialogues": [
+            { "speaker": "Narrator", "text": "Birden elektrikler kesilir." },
+            { "speaker": "Derya", "text": "Ne oluyor?!" }
           ]
         }
       ]
@@ -26,8 +178,8 @@
     {
       "id": "zeynep",
       "name": "Zeynep",
-      "image": "zeynep.png",
-      "summary": "Baran’ın asistanı. Geçmişi karanlık.",
+      "image": "image7",
+      "summary": "Baran'ın asistanı. Geçmişi karanlık.",
       "interrogation": {
         "dialogues": [
           { "speaker": "Dedektif", "text": "O gece neredeydin?" },
@@ -46,7 +198,7 @@
   "ending": {
     "trueCulpritId": "zeynep",
     "narration": "Zeynep, Baran'ın sırlarını ifşa etmek istiyordu...",
-    "image": "ending.jpg",
+    "image": "image9",
     "audio": "ending_theme.mp3"
   }
 }
