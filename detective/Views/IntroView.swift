@@ -16,39 +16,56 @@ struct IntroView: View {
                 Color.black.ignoresSafeArea()
             }
 
-            VStack(spacing: 32) {
+            // Butonları sol tarafa yerleştir
+            VStack {
                 Spacer()
-                if let text = intro?.text {
-                    Text(text)
-                        .font(.title2)
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(Color.black.opacity(0.6))
-                        .cornerRadius(16)
-                        .padding(.horizontal)
+                
+                HStack {
+                    VStack(spacing: 20) {
+                        Button(action: onStart) {
+                            Text("OYUNA BAŞLA")
+                                .font(.custom("Saira-SemiBold", size: 18))
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 16)
+                                .frame(width: 180)
+                        }
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(Color.black.opacity(0.6))
+                        )
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color.white.opacity(0.3), lineWidth: 1)
+                        )
+                        .shadow(color: Color.blue.opacity(0.4), radius: 8)
+
+                        Button(action: onSettings) {
+                            Text("AYARLAR")
+                                .font(.custom("Saira-SemiBold", size: 18))
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(.horizontal, 24)
+                                .padding(.vertical, 16)
+                                .frame(width: 180)
+                        }
+                        .background(
+                            RoundedRectangle(cornerRadius: 12)
+                                .fill(Color.black.opacity(0.6))
+                        )
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(Color.white.opacity(0.3), lineWidth: 1)
+                        )
+                        .shadow(color: Color.blue.opacity(0.4), radius: 8)
+                    }
+                    .padding(.leading, 40)
+                    
+                    Spacer()
                 }
+                
                 Spacer()
-                HStack(spacing: 24) {
-                    Button(action: onStart) {
-                        Text("Start Game")
-                            .font(.headline)
-                            .padding(.horizontal, 32)
-                            .padding(.vertical, 16)
-                            .background(Color.white.opacity(0.8))
-                            .foregroundColor(.black)
-                            .cornerRadius(12)
-                    }
-                    Button(action: onSettings) {
-                        Text("Settings")
-                            .font(.headline)
-                            .padding(.horizontal, 32)
-                            .padding(.vertical, 16)
-                            .background(Color.gray.opacity(0.7))
-                            .foregroundColor(.white)
-                            .cornerRadius(12)
-                    }
-                }
-                Spacer().frame(height: 40)
             }
         }
     }
