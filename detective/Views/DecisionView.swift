@@ -10,7 +10,7 @@ struct DecisionView: View {
 
             VStack {
                 Text("Katil Kim?")
-                    .font(.largeTitle)
+                    .font(.custom("Saira-SemiBold", size: 28))
                     .foregroundColor(.white)
                     .padding()
 
@@ -26,6 +26,7 @@ struct DecisionView: View {
                                         .clipShape(RoundedRectangle(cornerRadius: 20))
                                 }
                                 Text(suspect.name)
+                                    .font(.custom("Saira-Medium", size: 18))
                                     .foregroundColor(.white)
                                     .padding(.top, 8)
                                 Button("Seç") {

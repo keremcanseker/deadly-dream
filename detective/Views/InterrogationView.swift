@@ -18,10 +18,10 @@ struct InterrogationView: View {
                 if let dialogue = viewModel.currentDialogue {
                     VStack(alignment: .leading, spacing: 8) {
                         Text(dialogue.speaker)
-                            .font(.headline)
+                            .font(.custom("Saira-SemiBold", size: 18))
                             .foregroundColor(.yellow)
                         Text(dialogue.text)
-                            .font(.body)
+                            .font(.custom("Saira-Medium", size: 16))
                             .foregroundColor(.white)
                     }
                     .padding()
@@ -38,6 +38,7 @@ struct InterrogationView: View {
                     }
                 }) {
                     Text(viewModel.isLast ? "Devam Et" : "Sonraki Şüpheli")
+                        .font(.custom("Saira-SemiBold", size: 16))
                         .padding()
                         .background(Color.white)
                         .cornerRadius(10)

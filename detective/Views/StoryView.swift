@@ -18,10 +18,10 @@ struct StoryView: View {
                     Spacer()
                     VStack(alignment: .leading, spacing: 8) {
                         Text(dialogue.speaker)
-                            .font(.headline)
+                            .font(.custom("Saira-SemiBold", size: 18))
                             .foregroundColor(.orange)
                         Text(dialogue.text)
-                            .font(.body)
+                            .font(.custom("Saira-Medium", size: 16))
                             .foregroundColor(.white)
                     }
                     .padding()

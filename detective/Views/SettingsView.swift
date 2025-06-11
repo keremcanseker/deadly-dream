@@ -8,12 +8,12 @@ struct SettingsView: View {
             Color(.systemGray6).ignoresSafeArea()
             VStack(spacing: 32) {
                 Text("Ayarlar")
-                    .font(.largeTitle)
+                    .font(.custom("Saira-SemiBold", size: 28))
                     .padding(.top, 40)
                 Spacer()
                 Button(action: onClose) {
                     Text("Kapat")
-                        .font(.headline)
+                        .font(.custom("Saira-SemiBold", size: 18))
                         .padding(.horizontal, 32)
                         .padding(.vertical, 16)
                         .background(Color.blue.opacity(0.8))

@@ -17,11 +17,12 @@ struct EndingView: View {
 
             VStack {
                 Text(isCorrect ? "Doğru Tahmin!" : "Yanlış Kişiyi Suçladın...")
-                    .font(.title)
+                    .font(.custom("Saira-SemiBold", size: 24))
                     .foregroundColor(.white)
                     .padding()
 
                 Text(ending.narration)
+                    .font(.custom("Saira-Medium", size: 16))
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.black.opacity(0.6))
@@ -30,6 +31,7 @@ struct EndingView: View {
 
                 if let audio = ending.audio {
                     Text("🎵 \(audio)") // gerçek uygulamada ses oynatılır
+                        .font(.custom("Saira-Medium", size: 14))
                         .foregroundColor(.gray)
                         .italic()
                         .padding(.top)

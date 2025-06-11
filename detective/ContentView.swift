@@ -10,7 +10,7 @@ import SwiftUI
 struct DarkButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.headline)
+            .font(.custom("Saira-SemiBold", size: 18))
             .foregroundColor(.white)
             .padding(.vertical, 18)
             .padding(.horizontal, 32)
@@ -34,17 +34,24 @@ struct ContentView: View {
     var body: some View {
         Group {
             if isLoading {
-                ProgressView("Senaryo yükleniyor...")
+                VStack {
+                    ProgressView()
+                    Text("Senaryo yükleniyor...")
+                        .font(.custom("Saira-Medium", size: 16))
+                        .padding(.top, 8)
+                }
             } else if let scenario = scenario {
                 GameRootView(coordinator: GameCoordinatorViewModel(scenario: scenario))
             } else if let errorMessage = errorMessage {
                 VStack(spacing: 16) {
                     Text("Hata: \(errorMessage)")
+                        .font(.custom("Saira-Medium", size: 16))
                         .foregroundColor(.red)
                         .multilineTextAlignment(.center)
                     Button("Tekrar Dene") {
                         loadScenario()
                     }
+                    .font(.custom("Saira-SemiBold", size: 16))
                 }
                 .padding()
             }

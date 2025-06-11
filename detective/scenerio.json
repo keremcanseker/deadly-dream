@@ -418,7 +418,11 @@
             },
             {
               "speaker": "Aylin",
-              "text": "Çünkü… bir psikolog asistanının bir danışanla kişisel bir arkadaşlık kurması, etik dışıdır. Zeynep’i uzun süredir tanırım, severim. Disiplinlidir, dikkatlidir bu zamana kadar da hiçbir kusurunu görmedim. Ama geçenlerde… kahve molasında onunla sohbet ederken, Derya’nın randevulara gelmemesinden bahsettim, endişelendiğimi söyledim. Zeynep ise… “Merak etmeyin, her zamankinden daha iyi Derya” dedi."
+              "text": "Çünkü… bir psikolog asistanının bir danışanla kişisel bir arkadaşlık kurması, etik dışıdır. Zeynep’i uzun süredir tanırım, severim. Disiplinlidir, dikkatlidir bu zamana kadar da hiçbir kusurunu görmedim."
+            },
+            {
+              "speaker": "Aylin",
+              "text": "Ama geçenlerde… kahve molasında onunla sohbet ederken, Derya’nın randevulara gelmemesinden bahsettim, endişelendiğimi söyledim. Zeynep ise… “Merak etmeyin, her zamankinden daha iyi Derya” dedi."
             },
             {
               "speaker": "Polis",
@@ -434,7 +438,11 @@
             },
             {
               "speaker": "Aylin",
-              "text": "Açık açık söyledim: “Bu uygun değil. Derya bir arkadaş değil, hasta.” Zeynep’e bu görüşmeleri sonlandırması gerektiğini söyledim. O da çok sakin bir şekilde karşıladı. Tartışmadık. Zaten sonrasında tekrar görüştüklerini sanmıyorum. Bu görüşmelerden doğan samimiyetle belki Derya, iç dünyasıyla ilgili şeyleri Zeynep’e de anlatmıştır, bu yüzden onunla da konuşmanız iyi olur dedim."
+              "text": "Açık açık söyledim: “Bu uygun değil. Derya bir arkadaş değil, hasta.” Zeynep’e bu görüşmeleri sonlandırması gerektiğini söyledim. O da çok sakin bir şekilde karşıladı. Tartışmadık. Zaten sonrasında tekrar görüştüklerini sanmıyorum."
+            }
+            {
+              "speaker": "Aylin",
+              "text": "Bu görüşmelerden doğan samimiyetle belki Derya, iç dünyasıyla ilgili şeyleri Zeynep’e de anlatmıştır, bu yüzden onunla da konuşmanız iyi olur dedim."
             }
           ]
         }
@@ -461,7 +469,11 @@
             },
             {
               "speaker": "Zeynep",
-              "text": "Yani öyle büyük bir samimiyet de denemez. Kendisi benimle dışarda da buluşmak sohbet etmek istediğini söyledi ben de kıramadım. Açıkçası, Derya çok kırılgan bir danışandı. Zihni bölünmüş gibiydi. Rüyaları… gerçek sanıyor olabilir. Bazen konuşurken sanki rüyaları yaşamış gibi detay veriyordu. Gerçekle kurgu arasındaki çizgi onun için çok inceydi."
+              "text": "Yani öyle büyük bir samimiyet de denemez. Kendisi benimle dışarda da buluşmak sohbet etmek istediğini söyledi ben de kıramadım. Açıkçası, Derya çok kırılgan bir danışandı. Zihni bölünmüş gibiydi."
+            },
+            {
+                "speaker": "Zeynep",
+                "text": "Rüyaları… gerçek sanıyor olabilir. Bazen konuşurken sanki rüyaları yaşamış gibi detay veriyordu. Gerçekle kurgu arasındaki çizgi onun için çok inceydi."
             },
             {
               "speaker": "Polis",
