@@ -367,7 +367,37 @@
             },
             {
               "speaker": "Polis",
-              "text": "Onu takip ettin mi?"
+              "text": "Derya... ",
+              "playerChoices": [
+                {
+                  "text": "O kafeye kaç kez gittin? Onu takip mi ediyordun?",
+                  "response": {
+                    "speaker": "Derya",
+                    "text": "Takip mi? Hayır! Ben sadece… orası sakin bir yerdi. Çizim yapmayı seviyorum. Ama o oradayken… sanki beni çağırıyordu. Rüyamdaki gibi bakıyordu.",
+                    "emotion": "savunmacı ve korkmuş"
+                  }
+                },
+                {
+                  "text": "Rüyalarınla gerçek arasındaki farkı anlayabiliyor musun?",
+                  "response": {
+                    "speaker": "Derya",
+                    "text": "Bilmiyorum… Artık bilmiyorum. Her şey o kadar net ki rüyamda. Uyanınca da aynı hisler devam ediyor. Belki… belki gerçekten yaptım. Belki ben…",
+                    "emotion": "kafası karışık ve çaresiz"
+                  }
+                },
+                {
+                  "text": "Baran Tuncel'in öldürüldüğü gece tam olarak neredeydin?",
+                  "response": {
+                    "speaker": "Derya",
+                    "text": "O gece mi? Ben… evdeydim sanırım. Yoksa dışarıda mıydım? Hatırlamıyorum. İlaçlarımı almıştım, her şey bulanık. Ama sabah uyandığımda çok yorgundum.",
+                    "emotion": "kafası karışık ve endişeli"
+                  }
+                }
+              ]
+            },
+            {
+              "speaker": "Polis",
+              "text": "Derya! Onu takip ettin mi?"
             },
             {
               "speaker": "Derya",

@@ -15,14 +15,35 @@ final class StoryViewModel: ObservableObject {
     var currentDialogue: DialogueLine? {
         engine.currentDialogue
     }
+    
+    var hasChoices: Bool {
+        engine.hasChoices
+    }
+    
+    var playerChoices: [PlayerChoice] {
+        engine.playerChoices
+    }
+    
+    var waitingForChoiceSelection: Bool {
+        engine.waitingForChoiceSelection
+    }
+    
+    var showingChoiceResponse: Bool {
+        engine.selectedChoiceResponse != nil
+    }
+    
+    func selectChoice(_ choice: PlayerChoice) {
+        engine.selectChoice(choice)
+        // Trigger UI update
+        objectWillChange.send()
+    }
 
     func next() {
         engine.advance()
-        // Manuel olarak UI güncellemesini tetikle
         objectWillChange.send()
     }
 
     var isFinished: Bool {
         engine.isFinished
     }
-} 
+}

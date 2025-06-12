@@ -7,6 +7,8 @@ final class StoryEngine: ObservableObject {
     @Published var sectionIndex: Int = 0
     @Published var stepIndex: Int = 0
     @Published var dialogueIndex: Int = 0
+    @Published var selectedChoiceResponse: ChoiceResponse? = nil
+    @Published var waitingForChoiceSelection: Bool = false
 
     var isFinished: Bool {
         return sectionIndex >= storySections.count
@@ -28,12 +30,56 @@ final class StoryEngine: ObservableObject {
     }
 
     var currentDialogue: DialogueLine? {
+        // If we have a selected choice response, show that instead
+        if let response = selectedChoiceResponse {
+            return DialogueLine(
+                speaker: response.speaker,
+                text: response.text,
+                emotion: response.emotion,
+                action: nil,
+                playerChoices: nil
+            )
+        }
+        
         guard let step = currentStep,
               dialogueIndex < step.dialogues.count else { return nil }
         return step.dialogues[dialogueIndex]
     }
-
+    
+    var hasChoices: Bool {
+        guard let dialogue = currentDialogue,
+              selectedChoiceResponse == nil else { return false }
+        return dialogue.playerChoices?.isEmpty == false
+    }
+    
+    var playerChoices: [PlayerChoice] {
+        return currentDialogue?.playerChoices ?? []
+    }
+    
+    func selectChoice(_ choice: PlayerChoice) {
+        selectedChoiceResponse = choice.response
+        waitingForChoiceSelection = false
+    }
+    
     func advance() {
+        // If we're showing a choice response, clear it and move to next dialogue
+        if selectedChoiceResponse != nil {
+            selectedChoiceResponse = nil
+            normalAdvance()
+            return
+        }
+        
+        // If current dialogue has choices, don't advance - wait for choice selection
+        if hasChoices {
+            waitingForChoiceSelection = true
+            return
+        }
+        
+        // Normal advancement
+        normalAdvance()
+    }
+    
+    private func normalAdvance() {
         guard let step = currentStep else { return }
 
         if dialogueIndex + 1 < step.dialogues.count {
@@ -47,5 +93,7 @@ final class StoryEngine: ObservableObject {
                 sectionIndex = storySections.count
             }
         }
+        
+        waitingForChoiceSelection = false
     }
-} 
+}

@@ -36,7 +36,11 @@ struct StoryStep: Codable {
 struct DialogueLine: Codable {
     let speaker: String
     let text: String
+    let emotion: String?
+    let action: String?
+    let playerChoices: [PlayerChoice]? // Add this
 }
+
 
 // MARK: - Suspect + Interrogation Data
 
@@ -75,3 +79,16 @@ struct EndingSection: Codable {
     let image: String?
     let audio: String?
 } 
+
+// Add these new models
+struct PlayerChoice: Codable {
+    let text: String
+    let response: ChoiceResponse
+}
+
+struct ChoiceResponse: Codable {
+    let speaker: String
+    let text: String
+    let emotion: String?
+}
+
