@@ -2,6 +2,7 @@ import Foundation
 
 enum GamePhase {
     case intro
+    case disclaimerIntro
     case story
     case interrogation
     case decision
@@ -21,6 +22,8 @@ final class GameCoordinatorViewModel: ObservableObject {
     func goToNextPhase() {
         switch phase {
         case .intro:
+            phase = .disclaimerIntro
+        case .disclaimerIntro:
             phase = .story
         case .story:
             phase = .interrogation

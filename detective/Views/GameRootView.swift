@@ -15,6 +15,11 @@ struct GameRootView: View {
             .sheet(isPresented: $showSettings) {
                 SettingsView { showSettings = false }
             }
+        case .disclaimerIntro:
+            DisclaimerIntroView(
+                introText: coordinator.scenario.intro?.text ?? "",
+                onComplete: { coordinator.goToNextPhase() }
+            )
         case .story:
             if let sections = coordinator.scenario.storySections {
                 StoryView(viewModel: StoryViewModel(sections: sections)) {
