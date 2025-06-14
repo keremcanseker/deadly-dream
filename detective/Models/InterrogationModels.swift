@@ -17,28 +17,5 @@ struct InterrogationIntro: Codable {
 struct InterrogationSection: Codable, Identifiable {
     let id: String
     let title: String?
-    let steps: [InterrogationStep]
-}
-
-struct InterrogationStep: Codable {
-    let image: String?
-    let dialogues: [InterrogationDialogue]
-}
-
-struct InterrogationDialogue: Codable {
-    let speaker: String
-    let text: String
-    let emotion: String?
-    let playerChoices: [PlayerChoice]?
-}
-
-struct PlayerChoice: Codable {
-    let text: String
-    let response: ChoiceResponse
-}
-
-struct ChoiceResponse: Codable {
-    let speaker: String
-    let text: String
-    let emotion: String?
+    let steps: [DialogueStep]
 } 

@@ -7,17 +7,5 @@ struct StoryData: Codable {
 struct StorySection: Codable, Identifiable {
     let id: String
     let title: String?
-    let steps: [StoryStep]
-}
-
-struct StoryStep: Codable {
-    let image: String?
-    let dialogues: [Dialogue]
-}
-
-struct Dialogue: Codable {
-    let speaker: String
-    let text: String
-    let emotion: String?
-    let action: String?
+    let steps: [DialogueStep]
 } 
