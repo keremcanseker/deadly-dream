@@ -1,34 +1,43 @@
 import SwiftUI
 
 struct StoryView: View {
-    @ObservedObject var viewModel: StoryViewModel
-    let onStoryFinished: () -> Void
+    @StateObject private var typewriter = TypewriterEffect()
+    @State private var storyData: StoryData?
+    @State private var currentDialogueIndex: Int = 0
+    @State private var currentStepIndex: Int = 0
+    @State private var currentSectionIndex: Int = 0
+    @State private var currentStep: StoryStep?
+    @State private var currentSection: StorySection?
+    @State private var isLoaded = false
     
-    // Typewriter effect state
-    @State private var visibleText: String = ""
-    @State private var typewriterTimer: Timer?
-    @State private var currentCharacterIndex: Int = 0
-
+    let onStoryFinished: (() -> Void)?
+    
+    init(onStoryFinished: (() -> Void)? = nil) {
+        self.onStoryFinished = onStoryFinished
+    }
+    
     var body: some View {
         ZStack {
-            if let image = viewModel.currentImage {
-                Image(image)
+            // Arka plan resmi
+            if let imageName = currentStep?.image {
+                Image(imageName)
                     .resizable()
                     .scaledToFill()
                     .ignoresSafeArea()
-                    .transition(.opacity) // geçiş efekti
-                    .animation(.easeInOut(duration: 0.8), value: image) // animasyon ayarı
+                    .transition(.opacity)
+                    .animation(.easeInOut(duration: 0.8), value: imageName)
+            } else {
+                Color.black.ignoresSafeArea()
             }
-
-
-            if let dialogue = viewModel.currentDialogue {
+            
+            if let dialogue = currentDialogue {
                 VStack {
                     Spacer()
                     VStack(alignment: .leading, spacing: 8) {
                         Text(dialogue.speaker)
                             .font(.custom("Saira-SemiBold", size: 18))
                             .foregroundColor(.orange)
-                        Text(visibleText)
+                        Text(typewriter.visibleText)
                             .font(.custom("Saira-Medium", size: 16))
                             .foregroundColor(.white)
                     }
@@ -38,57 +47,114 @@ struct StoryView: View {
                     .padding()
                 }
                 .onAppear {
-                    startTypewriterEffect(for: dialogue.text)
+                    if !isLoaded {
+                        loadStory()
+                    }
                 }
-                .onChange(of: dialogue.text) { newText in
-                    startTypewriterEffect(for: newText)
+                .onChange(of: currentDialogueIndex) { _ in
+                    updateCurrentDialogue()
                 }
+                .onChange(of: currentStepIndex) { _ in
+                    updateCurrentStep()
+                }
+                .onChange(of: currentSectionIndex) { _ in
+                    updateCurrentSection()
+                }
+            } else {
+                Text("Hikaye Yükleniyor...")
+                    .foregroundColor(.white)
+                    .onAppear {
+                        if !isLoaded {
+                            loadStory()
+                        }
+                    }
             }
         }
         .contentShape(Rectangle())
         .onTapGesture {
-            // If typewriter effect is in progress, complete it immediately
-            if let dialogue = viewModel.currentDialogue, visibleText != dialogue.text {
-                completeTypewriterEffect()
-            } else {
-                // Otherwise, advance to next dialogue
-                viewModel.next()
-                if viewModel.isFinished {
-                    onStoryFinished()
+            if let dialogue = currentDialogue {
+                if typewriter.isTyping {
+                    typewriter.completeTypewriterEffect(with: dialogue.text)
+                } else {
+                    goToNextDialogue()
                 }
             }
         }
-        .onDisappear {
-            stopTypewriterEffect()
-        }
     }
     
-    private func startTypewriterEffect(for text: String) {
-        stopTypewriterEffect()
-        visibleText = ""
-        currentCharacterIndex = 0
+    private var currentDialogue: Dialogue? {
+        currentStep?.dialogues[safe: currentDialogueIndex]
+    }
+    
+    private func goToNextDialogue() {
+        guard let storyData = storyData else { return }
+        guard let step = currentStep else { return }
         
-        typewriterTimer = Timer.scheduledTimer(withTimeInterval: 0.025, repeats: true) { timer in
-            if currentCharacterIndex < text.count {
-                let index = text.index(text.startIndex, offsetBy: currentCharacterIndex)
-                visibleText = String(text[...index])
-                currentCharacterIndex += 1
-            } else {
-                timer.invalidate()
-                typewriterTimer = nil
-            }
+        // Mevcut step'teki sonraki diyaloga geç
+        if currentDialogueIndex < step.dialogues.count - 1 {
+            currentDialogueIndex += 1
+            return
+        }
+        
+        // Mevcut section'daki sonraki step'e geç
+        if let section = currentSection,
+           currentStepIndex < section.steps.count - 1 {
+            currentStepIndex += 1
+            currentDialogueIndex = 0
+            return
+        }
+        
+        // Sonraki section'a geç
+        if currentSectionIndex < storyData.storySections.count - 1 {
+            currentSectionIndex += 1
+            currentStepIndex = 0
+            currentDialogueIndex = 0
+            return
+        }
+        
+        // Hikaye bitti
+        onStoryFinished?()
+    }
+    
+    private func updateCurrentSection() {
+        guard let storyData = storyData else { return }
+        currentSection = storyData.storySections[safe: currentSectionIndex]
+        updateCurrentStep()
+    }
+    
+    private func updateCurrentStep() {
+        guard let section = currentSection else { return }
+        currentStep = section.steps[safe: currentStepIndex]
+        updateCurrentDialogue()
+    }
+    
+    private func updateCurrentDialogue() {
+        if let dialogue = currentDialogue {
+            typewriter.startTypewriterEffect(for: dialogue.text)
         }
     }
     
-    private func completeTypewriterEffect() {
-        if let dialogue = viewModel.currentDialogue {
-            stopTypewriterEffect()
-            visibleText = dialogue.text
+    private func loadStory() {
+        guard let url = Bundle.main.url(forResource: "story", withExtension: "json"),
+              let data = try? Data(contentsOf: url),
+              let decoded = try? JSONDecoder().decode(StoryData.self, from: data) else {
+            return
         }
+        self.storyData = decoded
+        
+        // İlk section, step ve dialogue'u ayarla
+        currentSectionIndex = 0
+        currentStepIndex = 0
+        currentDialogueIndex = 0
+        
+        updateCurrentSection()
+        self.isLoaded = true
     }
-    
-    private func stopTypewriterEffect() {
-        typewriterTimer?.invalidate()
-        typewriterTimer = nil
+}
+
+// Güvenli dizi erişimi için extension
+extension Collection {
+    subscript(safe index: Index) -> Element? {
+        indices.contains(index) ? self[index] : nil
     }
 } 

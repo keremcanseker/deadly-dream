@@ -9,12 +9,9 @@ import SwiftUI
 
 @main
 struct detectiveApp: App {
-    let persistenceController = PersistenceController.shared
-
-    var body: some Scene {
+    var body: some SwiftUI.Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            GameView()
         }
     }
 }

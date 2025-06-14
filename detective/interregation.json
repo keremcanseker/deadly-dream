@@ -9,321 +9,6 @@
   },
   "storySections": [
     {
-      "id": "1",
-      "title": "Seans 1",
-      "steps": [
-        {
-          "image": "image1",
-          "dialogues": [
-            {
-              "speaker": "Psikolog Aylin",
-              "text": "Derya… geçen hafta rüya göremediğini söylemiştin. Şimdi tekrar başladığını söyledin. Ne değişti sence?"
-            },
-            {
-              "speaker": "Derya",
-              "text": "Artık sadece görmek değil… yine aynı adamı her gece görüyorum. Aynı yüz. Aynı yer. Aynı his.",
-              "emotion": "duraksayarak"
-            },
-            {
-              "speaker": "Psikolog Aylin",
-              "text": "Ne yapıyor bu adam rüyanda?"
-            },
-            {
-              "speaker": "Derya",
-              "text": "Hiçbir şey. Orada duruyor. Bana bakıyor sadece. Ama ben... ona zarar veriyorum."
-            },
-            { "speaker": "Psikolog Aylin", "text": "Nasıl zarar veriyorsun?" },
-            {
-              "speaker": "Derya",
-              "text": "Tam hatırlayamıyorum. Ama sabahları hep… yorgun uyanıyorum. Sanki gerçekten olmuş gibi. Ellerim bile ağrıyor bazen.",
-              "emotion": "bakışlarını kaçırarak"
-            },
-            { "speaker": "Psikolog Aylin", "text": "Bu adamı tanıyor musun?" },
-            {
-              "speaker": "Derya",
-              "text": "Hayır. Daha önce hiç görmedim. Ama rüyada... tanıyormuşum gibi. Beni tanıyormuş gibi."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Seans 2",
-      "steps": [
-        {
-          "image": "image2",
-          "dialogues": [
-            {
-              "speaker": "Derya",
-              "text": "Her gece aynı. Boğazıma kadar kana batmış halde uyanıyorum. Nefes nefese… Bazen uyanınca ellerime bakıyorum. Temizler ama... öyleymiş gibi değil. Gerçekmiş gibi hissediyorum. Dün sabah mesela, adamın sesi kulağımdaydı. Uyanır uyanmaz... duydum onu."
-            },
-            {
-              "speaker": "Psikolog Aylin",
-              "text": "Ne dediğini hatırlıyor musun?"
-            },
-            {
-              "speaker": "Derya",
-              "text": "‘Neden?’ dedi. Tek kelime. Ama defalarca yankılandı içimde. Gözlerini gördüm... tanıyorum o bakışı ama tanımıyorum da. Bilmiyorum. Beni izliyor, aynadan, televizyondan, bardaktaki sudan bile… Kendi yansımam değil o. Başka biri."
-            },
-            {
-              "speaker": "Psikolog Aylin",
-              "text": "Derya, sen yalnızsın şu an. Buradayız. Benimle konuşuyorsun."
-            },
-            {
-              "speaker": "Derya",
-              "text": "Hayır! Siz anlamıyorsunuz. Bazen ben bile ben değilim! Ellerim hareket ediyor ama sanki... benim değil. Ne yaptığımı hatırlamıyorum bazen.",
-              "emotion": "sinirli"
-            },
-            {
-              "speaker": "Psikolog Aylin",
-              "text": "Derya, bana böyle hissettiğin bir anını anlatır mısın?",
-              "emotion": "sakin"
-            },
-            {
-              "speaker": "Derya",
-              "text": "Dün gece. Uyandım... çantamda bir çizim vardı. O adamın yüzü. Ama onu çizdiğimi hatırlamıyorum."
-            },
-            { "speaker": "Psikolog Aylin", "text": "Çizimi getirdin mi?" },
-            {
-              "speaker": "Derya",
-              "text": " (çantasından buruşturulmuş bir kağıt çıkarır) Bu o. Gözleri… gözleri gitmiyor aklımdan.",
-              "action": "çantasından buruşturulmuş bir kâğıt çıkarır."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "",
-      "steps": [
-        {
-          "image": "image3",
-          "dialogues": [
-            {
-              "speaker": "Derya",
-              "text": "Neden? Neden durmuyor? Dur artık... Lütfen..."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "",
-      "steps": [
-        {
-          "image": "image4",
-          "dialogues": [
-            {
-              "speaker": "Derya",
-              "text": "Bir rüyaydı... sadece bir rüya... Değildi, değil mi?"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "title": "",
-      "steps": [
-        {
-          "image": "image5",
-          "dialogues": [
-            {
-              "speaker": "Derya",
-              "text": "Bu gerçek değil. Olmamalı. Sakin olmalıyım. İlaçlar... ilaçlarımı almalıyım."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "title": "",
-      "steps": [
-        {
-          "image": "image6",
-          "dialogues": [
-            {
-              "speaker": "Derya",
-              "text": "Tamam, bu ilaçlar beni sakinleştirir. Her şey düzelecek, yalnızca biraz daha sabretmeliyim. Bu gece de uyuyamam gibi.. Yine televizyonun başında sabahlıyorum ha?"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Haber",
-      "steps": [
-        {
-          "image": "image7",
-          "dialogues": [
-            {
-              "speaker": "TV",
-              "text": "Baran Tuncel sahibi olduğu kafenin arka sokağında ölü bulundu, başına taşla vurularak canice katledilen Baran Tuncel’in cinayeti araştırılıyor."
-            },
-            {
-              "speaker": "Derya",
-              "text": "Hayır... Bu olamaz. O sadece bir rüyaydı. Değildi, değil…"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "8",
-      "title": "Panik",
-      "steps": [
-        {
-          "image": "image8",
-          "dialogues": [
-            {
-              "speaker": "Derya",
-              "text": "Aylin... Haberlerde… o adamı gördüm. Rüyamda gördüğüm adamı… Öldürülmüş. Gerçekten... gerçek.",
-              "emotion": "panik içinde"
-            },
-            {
-              "speaker": "Aylin",
-              "text": "Ne? O adam mı? Emin misin Derya? Rüyandaki adamdan bahsediyorsun değil mi?",
-              "emotion": "şaşırmış"
-            },
-            {
-              "speaker": "Derya",
-              "text": "Evet, aynısıydı. Yüzü, duruşu… hatta o çizimini yaptığım adam. Her şey… her şey doğru.",
-              "emotion": "titrek sesle"
-            },
-            {
-              "speaker": "Aylin",
-              "text": "Derya, sakin ol. Bu çok ciddi. Şimdi hemen ofisime gelmen gerekiyor. Durumu konuşmalıyız.",
-              "emotion": "endişeyle"
-            },
-            {
-              "speaker": "Derya",
-              "text": "Tamam, geliyorum. Ama Aylin… Ben bunu yapmadım. Hatırlamıyorum…",
-              "emotion": "panikle"
-            },
-            {
-              "speaker": "Aylin",
-              "text": "Biliyorum, ama beraber bunu çözmemiz lazım. Ve mümkünse o adamın çizimlerini yanına al, çok önemli.",
-              "emotion": "kararlı"
-            },
-            {
-              "speaker": "Derya",
-              "text": "Tamam… hemen hazırlanıyorum.",
-              "emotion": "derin nefes alarak"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "9",
-      "title": "Çizim",
-      "steps": [
-        {
-          "image": "image9",
-          "dialogues": [
-            {
-              "speaker": "Aylin",
-              "text": "Derya, bu çizimi bana getirdiğin için teşekkür ederim. Bunu beraber çözeceğiz tamam mı? Ama sana yardım edebilmem için bana her şeyi anlatmalısın."
-            },
-            {
-              "speaker": "Derya",
-              "text": "Ben yapmadım. ama ya…",
-              "emotion": "ağlamaklı"
-            },
-            {
-              "speaker": "Aylin",
-              "text": "Henüz hiçbir şey kesin değil, Derya. Şimdi bunları düşünme ve sadece sakinleş, yanındayım, güvende olacaksın.",
-              "emotion": "sert ama şefkatli"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "10",
-      "title": "Aylin Polisle Konuşur",
-      "steps": [
-        {
-          "image": "image10",
-          "dialogues": [
-            {
-              "speaker": "Aylin",
-              "text": "Merhaba, ben psikolog Aylin. Bugün... bugün çok kötü bir şey yaşandı. Danışanım Derya, birkaç aydır bende terapi görüyor. Sürekli aynı kabusları görüyor… sürekli olarak rüyasında bir adamı öldürdüğünü gördüğünü söylüyor. Ama az önce televizyonda o adamın gerçekten öldüğünü gösterdiler. Baran Tuncel.",
-              "emotion": "endişeli"
-            },
-            {
-              "speaker": "Polis",
-              "text": "O adamın Baran Tuncel olduğuna nasıl eminsiniz?",
-              "emotion": "daha ilgili"
-            },
-            {
-              "speaker": "Aylin",
-              "text": "Derya haberi görür görmez beni panikle aradı, haberlerde gördüğü adamın yani Baran Tuncel’in rüyasında gördüğü adam olduğunu söyledi, “gerçekten öldürülmüş” dedi,inanamadım. Çok korkuyor, kendini suçluyor. Derya çok iyi çizim yapar. Bir keresinde benim resmimi de çizmişti, bana tıpatıp benziyordu gerçekten. Rüyaları o kadar net ve etkileyici bir hal almıştı ki gördüğü adamın da portresini çizmişti. Haberlerde o adamı görünce... gerçekten de çizdiği adam o, Baran Tuncel. Derya’yı çok severim fakat bunu bildirmem gerektiğini düşündüm, eğer bir bağlantısı varsa...",
-              "emotion": "açıklayıcı"
-            },
-            {
-              "speaker": "Polis",
-              "text": "Anlattıklarınız gerçekten hayret verici Aylin Hanım. Şu bahsettiğiniz çizimi görmek isterim."
-            },
-            {
-              "speaker": "Aylin",
-              "text": "İşte burada. Çok ayrıntılı ve tıpatıp benziyor.",
-              "emotion": "çantasında çizimi çıkarır"
-            },
-            {
-              "speaker": "Polis",
-              "text": "Peki Derya’nın durumu nasıl?"
-            },
-            {
-              "speaker": "Aylin",
-              "text": "Çok kırılgan. Eğer bu cinayeti gerçekten Derya işlemişse, aklı başında değilken yapmış olduğunu düşünüyorum, ciddi bir ilaç tedavisi görüyordu. Psikolojik tedavisi devam etmeli.",
-              "emotion": "üzgün"
-            },
-            {
-              "speaker": "Polis",
-              "text": "Anladım. Bu durumda dikkatli davranacağız fakat kararı verecek kişiler biz değiliz. Buraya geldiğiniz için teşekkürler."
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "11",
-      "title": "Geçiş - Dedektife Mesaj",
-      "steps": [
-        {
-          "image": "fade_to_black",
-          "dialogues": [
-            {
-              "speaker": "",
-              "text": "Rüya mıydı bu? Tesadüf mü? Yoksa… kusursuz bir plan mı?",
-              "emotion": "narration"
-            },
-            {
-              "speaker": "",
-              "text": "Şimdi gözler sende, dedektif. Sır perdesi kalın. Zihinler bulanık.",
-              "emotion": "narration"
-            },
-            {
-              "speaker": "",
-              "text": "🔍 Şüphelilerle konuş ve delilleri incele.",
-              "emotion": "narration"
-            },
-            {
-              "speaker": "",
-              "text": "Gerçeği ortaya çıkaracak kişi sensin.",
-              "emotion": "narration"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "12",
       "title": "Derya Sorguda",
       "steps": [
@@ -367,7 +52,37 @@
             },
             {
               "speaker": "Polis",
-              "text": "Onu takip ettin mi?"
+              "text": "Derya... ",
+              "playerChoices": [
+                {
+                  "text": "O kafeye kaç kez gittin? Onu takip mi ediyordun?",
+                  "response": {
+                    "speaker": "Derya",
+                    "text": "Takip mi? Hayır! Ben sadece… orası sakin bir yerdi. Çizim yapmayı seviyorum. Ama o oradayken… sanki beni çağırıyordu. Rüyamdaki gibi bakıyordu.",
+                    "emotion": "savunmacı ve korkmuş"
+                  }
+                },
+                {
+                  "text": "Rüyalarınla gerçek arasındaki farkı anlayabiliyor musun?",
+                  "response": {
+                    "speaker": "Derya",
+                    "text": "Bilmiyorum… Artık bilmiyorum. Her şey o kadar net ki rüyamda. Uyanınca da aynı hisler devam ediyor. Belki… belki gerçekten yaptım. Belki ben…",
+                    "emotion": "kafası karışık ve çaresiz"
+                  }
+                },
+                {
+                  "text": "Baran Tuncel'in öldürüldüğü gece tam olarak neredeydin?",
+                  "response": {
+                    "speaker": "Derya",
+                    "text": "O gece mi? Ben… evdeydim sanırım. İlaçlarımı almıştım, her şey bulanık. Ama sabah uyandığımda çok yorgundum.",
+                    "emotion": "kafası karışık ve endişeli"
+                  }
+                }
+              ]
+            },
+            {
+              "speaker": "Polis",
+              "text": "Derya! Onu takip ettin mi?"
             },
             {
               "speaker": "Derya",
@@ -443,6 +158,36 @@
             {
               "speaker": "Aylin",
               "text": "Bu görüşmelerden doğan samimiyetle belki Derya, iç dünyasıyla ilgili şeyleri Zeynep’e de anlatmıştır, bu yüzden onunla da konuşmanız iyi olur dedim."
+            },
+            {
+              "speaker": "Polis",
+              "text": "Aylin Hanım... ",
+              "playerChoices": [
+                {
+                  "text": "Derya'ya tam olarak hangi tanıyı koymuştunuz?",
+                  "response": {
+                    "speaker": "Aylin",
+                    "text": "Derya'ya resmi olarak disosiyatif kimlik bozukluğu tanısı koymadım ama ciddi derecede dissosiyatif belirtiler gösteriyordu.",
+                    "emotion": "savunmacı ve korkmuş"
+                  }
+                },
+                {
+                  "text": "Zeynep'in bu sınırı ihlal etmesi sizi neden bu kadar şaşırttı?",
+                  "response": {
+                    "speaker": "Aylin",
+                    "text": "Çünkü Zeynep son derece profesyonel biridir. Böyle bir şey yapmasını beklemezdim. Belki de Derya'ya karşı özel bir sempatisi oluştu.",
+                    "emotion": "kafası karışık ve çaresiz"
+                  }
+                },
+                {
+                  "text": "Zeynep'in 'Derya her zamankinden iyi' dediğini söylediniz. Öyle miydi gerçekten?",
+                  "response": {
+                    "speaker": "Aylin",
+                    "text": "Benim gözlemim tam tersiydi. Seanslara gelmemesi, duygusal çöküşler… Tüm bunlar iyileşme değil, kötüleşme belirtisiydi. Zeynep neden böyle dedi bilmiyorum.",
+                    "emotion": "kafası karışık ve endişeli"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -490,6 +235,28 @@
             {
               "speaker": "Zeynep",
               "text": "Sadece bir kez, Psikolog Aylin’in ofisinde Derya’nın yaptığı bir çizimi görmüştüm. Oldukça gerçekçiydi. O kadar iyi çiziyordu ki… portresi neredeyse canlı gibiydi. Sanırım… o çizim Baran’ınkiydi. Çok başarılıydı. Derya’nın yeteneği gerçekten üst düzeydi. Bir gün bu hastalıktan kurtulup… güzel bir gelecek yaşamasını umutla bekliyordum yazık etti kendine."
+            },
+            {
+              "speaker": "Polis",
+              "text": "Zeynep Hanım... ",
+              "playerChoices": [
+                {
+                  "text": "Neden Derya'nın durumunun iyileştiğini düşündünüz? Aylin Hanım bunun tam tersini gözlemlediğini söylüyor.",
+                  "response": {
+                    "speaker": "Zeynep",
+                    "text": "Derya'ya henüz kesin bir tanı konmamıştı ama davranışlarında ağır kişilik bozukluğu belirtileri vardı. Bazı hastalar… kendilerini korumak için farklı benlikler geliştirir. Bir kimlikteyken diğerinin yaptıklarını hatırlamazlar. Belki de bana sadece o 'iyi' tarafını gösterdi. Gülümsediği, umut dolu konuştuğu o anları..",
+                    "emotion": "savunmacı ve korkmuş"
+                  }
+                },
+                {
+                  "text": "Derya sizinle ne tür sırlarını paylaştı?",
+                  "response": {
+                    "speaker": "Zeynep",
+                    "text": "Önce küçük şeylerle başladı... yalnız hissettiğini, kimseye güvenemediğini söylüyordu. Sonra geceleri gördüğü rüyalardan bahsetti. Kan, çığlıklar, boğulma hissi… ve hep aynı adam.",
+                    "emotion": "kafası karışık ve çaresiz"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -526,6 +293,36 @@
             {
               "speaker": "Sevgi",
               "text": "Bana çok bir şey anlatmazdı. Evde telefonla konuşurken duyuyordum sadece, bağırır çağırırdı Mert’e telefonda. Mert’e “artık ortağım değilsin” gibi bir şeyler söyledi. Çok öfkeliydi. “Ne oldu oğlum” dedim. “Bıktım bunun hırsından düşmüyor yakamdan” dedi."
+            },
+            {
+              "speaker": "Polis",
+              "text": "Sevgi Hanım... ",
+              "playerChoices": [
+                {
+                  "text": "Baran size hiç Derya isimli bir kadından bahsetti mi?",
+                  "response": {
+                    "speaker": "Sevgi",
+                    "text": "Hayır… bahsetmedi. Bahsettiyse de hatırlamam gerçi yavrum, Baran'ın kız arkadaş listesi biraz kabarık.",
+                    "emotion": "savunmacı ve korkmuş"
+                  }
+                },
+                {
+                  "text": "Melisa ve Baran'ın ayrılıkları hakkında ne biliyorsunuz? Hâlâ görüşüyorlar mıydı?",
+                  "response": {
+                    "speaker": "Sevgi",
+                    "text": "Melisa'yla ilişkileri çok tutkuluydu ama bir o kadar da yıpratıcıydı. Bir küsüp bir barışırlardı. En son ayrıldıklarında Baran çok sarsılmıştı. Ama bir hafta önceydi, gece yarısı kapıda Melisa'yı gördüm. Sessizce konuştular. Ne oldu bilmiyorum ama… Baran o geceden sonra daha öfkeliydi.",
+                    "emotion": "kafası karışık ve çaresiz"
+                  }
+                },
+                {
+                  "text": "Son zamanlarda Baran'ın psikolojik durumu nasıldı?",
+                  "response": {
+                    "speaker": "Sevgi",
+                    "text": "Normaldi bence. İş konusu dışında canını sıkan bir şey olduğunu bilmiyorum.",
+                    "emotion": "kafası karışık ve çaresiz"
+                  }
+                }
+              ]
             },
             {
               "speaker": "Polis",
@@ -664,6 +461,28 @@
             {
               "speaker": "Melisa",
               "text": "Haha, güzel yakaladınız, öldürünce elime ne geçecek ki, paramı geri mi alacağım? Böyle bir şey olmadı. Beni suçlayacağınıza biraz da Mert’le konuşmanızı öneririm."
+            },
+            {
+              "speaker": "Polis",
+              "text": "Melisa Hanım... ",
+              "playerChoices": [
+                {
+                  "text": "Baran'ın sizi kimle aldattığını biliyor musunuz?",
+                  "response": {
+                    "speaker": "Melisa",
+                    "text": "Tam olarak bilmiyorum. O kadar iyi sakladı ki. Ama hislerim güçlüdür… Bir gün o banyodayken telefonunu karıştırdım. Kayıtlı bile olmayan bir numaradan 'aşkımlı canımlı' bir mesaj.. Önceki mesajlar silinmiş tabi ki.",
+                    "emotion": "savunmacı ve korkmuş"
+                  }
+                },
+                {
+                  "text": "Neden Baran Bey'in kapısına dayandınız, aranızda nasıl bir konuşma geçti o gün?",
+                  "response": {
+                    "speaker": "Melisa",
+                    "text": "Kapıya dayanmak!? Dediğim gibi Baran'ın bana borcu vardı, az bir borç da değil bu! Borcumu istemeye gitmiştim.",
+                    "emotion": "kafası karışık ve çaresiz"
+                  }
+                }
+              ]
             }
           ]
         }
@@ -715,6 +534,10 @@
             {
               "speaker": "Mert",
               "text": "Evet arabam oradaydı çünkü iş sözleşmesi götürmüştüm. Daha önce de imzalatmayı denedim ama hiç yanaşmadı, belki bu sefer konuşur hallederiz umuduyla. İçeri girip Baran’la konuşacaktım ama tam o sırada içeride Melisa’yla tartışıyorlardı. Onun o haliyle hiçbir şey konuşamayacağımı biliyordum. O yüzden geri döndüm. Arabada biraz bekledim, belki ortam sakinleşir diye… ama sonra başka işim çıktı, ayrıldım."
+            },
+            {
+              "speaker": "Mert",
+              "text": "Aksine, Baran'ın talepleri aşırıydı. Ben sadece hakkım olanı istedim. Kafenin kuruluşunda yüzde kırk sermaye koydum, ama iş büyüyünce beni saf dışı bırakmaya kalktı. Sözleşmede sadece şu yazıyordu: 'Ortaklık feshedilirken, başlangıç yatırımı oranında hisse karşılığı ödeme yapılacaktır.'"
             }
           ]
         }

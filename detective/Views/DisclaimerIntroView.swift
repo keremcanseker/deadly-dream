@@ -1,11 +1,10 @@
 import SwiftUI
 
 struct DisclaimerIntroView: View {
-    let introText: String
+
     let onComplete: () -> Void
     
     @State private var showDisclaimer = true
-    @State private var showIntroText = false
     @State private var disclaimerOpacity: Double = 0
     @State private var introTextOpacity: Double = 0
     
@@ -28,14 +27,7 @@ struct DisclaimerIntroView: View {
                 .opacity(disclaimerOpacity)
             }
             
-            if showIntroText {
-                Text(introText)
-                    .font(.custom("Saira-Medium", size: 20))
-                    .foregroundColor(.white)
-                    .multilineTextAlignment(.center)
-                    .padding(.horizontal, 40)
-                    .opacity(introTextOpacity)
-            }
+           
         }
         .onAppear {
             startSequence()
@@ -56,7 +48,7 @@ struct DisclaimerIntroView: View {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 showDisclaimer = false
-                showIntroText = true
+
                 
                 withAnimation(.easeIn(duration: 1.5)) {
                     introTextOpacity = 1.0
