@@ -21,3 +21,31 @@ struct GameButtonStyle: ButtonStyle {
             .animation(.easeInOut(duration: 0.1), value: configuration.isPressed)
     }
 }
+
+extension ButtonStyle where Self == GameButtonStyle {
+    static var gameButton: GameButtonStyle { GameButtonStyle() }
+}
+
+struct NotesButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(.custom("Saira-SemiBold", size: 14))
+            .foregroundColor(.white)
+            .frame(width: 50, height: 50)
+            .background(
+                Circle()
+                    .fill(Color.black.opacity(0.7))
+            )
+            .overlay(
+                Circle()
+                    .stroke(Color.orange.opacity(0.6), lineWidth: 2)
+            )
+            .shadow(color: Color.orange.opacity(0.3), radius: 6)
+            .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+            .animation(.easeInOut(duration: 0.1), value: configuration.isPressed)
+    }
+}
+
+extension ButtonStyle where Self == NotesButtonStyle {
+    static var notesButton: NotesButtonStyle { NotesButtonStyle() }
+}

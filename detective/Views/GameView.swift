@@ -25,6 +25,10 @@ class GameCoordinatorViewModel: ObservableObject {
             currentStep = .intro
         }
     }
+    
+    func goToInterrogation() {
+        currentStep = .interrogation
+    }
 }
 
 struct GameView: View {
@@ -36,7 +40,8 @@ struct GameView: View {
         case .intro:
             IntroView(
                 onStartGame: coordinator.goToNext,
-                onShowSettings: { showSettings.toggle() }
+                onShowSettings: { showSettings.toggle() },
+                onGoToInterrogation: coordinator.goToInterrogation
             )
         case .disclaimer:
             DisclaimerIntroView(

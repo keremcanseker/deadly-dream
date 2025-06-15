@@ -3,6 +3,7 @@ import SwiftUI
 struct IntroView: View {
     let onStartGame: () -> Void
     let onShowSettings: () -> Void
+    let onGoToInterrogation: () -> Void
     
     var body: some View {
         ZStack {
@@ -18,6 +19,11 @@ struct IntroView: View {
                         VStack(spacing: 12) {
                             Button("OYUNA BAŞLA") {
                                 onStartGame()
+                            }
+                            .buttonStyle(GameButtonStyle())
+                            
+                            Button("SORGULAMAYA GEÇ") {
+                                onGoToInterrogation()
                             }
                             .buttonStyle(GameButtonStyle())
                             
